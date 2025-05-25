@@ -36,6 +36,21 @@ class CardDeck {
         };
         shuffleCards(this.deck);
     }
+
+    private getCard(): Card {
+        return this.deck.splice(
+            Math.floor(Math.random() * this.deck.length),
+            1
+        )[0];
+    }
+
+    public getCards(howMany: number): Card[] {
+        const cardsArr: Card[] = [];
+        for (let i = 0; i < howMany; i++) {
+            cardsArr.push(this.getCard());
+        }
+        return cardsArr;
+    }
 }
 
 export default CardDeck;

@@ -4,6 +4,7 @@ import CardDeck from "./lib/CardDeck.ts";
 const App = () => {
     const cardDeck = new CardDeck();
     console.log(cardDeck.deck);
+    cardDeck.getCards(5);
 
     return (
         <div className="playingCards faceImages">
