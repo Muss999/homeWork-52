@@ -1,6 +1,10 @@
 import Card from "./components/Card/Card.tsx";
+import CardDeck from "./lib/CardDeck.ts";
 
 const App = () => {
+    const cardDeck = new CardDeck();
+    console.log(cardDeck.deck);
+
     return (
         <div className="playingCards faceImages">
             <Card rank="J" suit="diams" />
