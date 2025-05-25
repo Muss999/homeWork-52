@@ -46,6 +46,10 @@ class CardDeck {
 
     public getCards(howMany: number): Card[] {
         const cardsArr: Card[] = [];
+        if (this.deck.length < 5) {
+            alert("CardDeck has not enough cards for set");
+            return cardsArr;
+        }
         for (let i = 0; i < howMany; i++) {
             cardsArr.push(this.getCard());
         }
