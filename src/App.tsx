@@ -7,7 +7,6 @@ import PokerHand from "./lib/PokerHand.ts";
 const App = () => {
     const [cardDeck, setCardDeck] = useState(new CardDeck());
     const [cards, setCards] = useState<CardClass[]>([]);
-    console.log(cards);
 
     if (cards.length === 0) {
         return (
@@ -38,7 +37,6 @@ const App = () => {
     } else {
         const combination = new PokerHand(cards);
         const currentCombination = combination.getOutcome();
-        console.log(currentCombination);
         return (
             <>
                 <button
